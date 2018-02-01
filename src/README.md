@@ -1,1 +1,1 @@
-# Shoperti Tamara Theme
+# Shoperti Electro Theme

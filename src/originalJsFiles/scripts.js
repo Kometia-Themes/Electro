@@ -3724,7 +3724,7 @@ window.matchMedia || (window.matchMedia = function() {
           that.$button
             .addClass('bs-invalid')
             .focus();
-          
+
           that.$element.on({
             'focus.bs.select': function () {
               that.$button.focus();
@@ -3741,7 +3741,7 @@ window.matchMedia || (window.matchMedia = function() {
               that.$element.off('rendered.bs.select');
             }
           });
-          
+
         });
       }
 
@@ -4378,12 +4378,12 @@ window.matchMedia || (window.matchMedia = function() {
     },
 
     tabIndex: function () {
-      if (this.$element.data('tabindex') !== this.$element.attr('tabindex') && 
+      if (this.$element.data('tabindex') !== this.$element.attr('tabindex') &&
         (this.$element.attr('tabindex') !== -98 && this.$element.attr('tabindex') !== '-98')) {
         this.$element.data('tabindex', this.$element.attr('tabindex'));
         this.$button.attr('tabindex', this.$element.data('tabindex'));
       }
-      
+
       this.$element.attr('tabindex', -98);
     },
 
@@ -4709,7 +4709,7 @@ window.matchMedia || (window.matchMedia = function() {
 
     toggle: function (e) {
       e = e || window.event;
-      
+
       if (e) e.stopPropagation();
 
       this.$button.trigger('click');
@@ -5471,7 +5471,7 @@ imgLiquid.injectCss = '.imgLiquid img {visibility:hidden}';
 "use strict";
 // Use this variable to set up the common and page specific functions. If you
 // rename this variable, you will also need to rename the namespace below.
-var Tamara = {
+var Electro = {
   // All pages
   common: {
     init: function() {
@@ -5521,8 +5521,8 @@ var Tamara = {
          $(this).hide();
         });
       }
-      
-     
+
+
        $(document).click(function() {
          $('.navigation__link + .dropdown-menu' ).css({"display": "none"});
        });
@@ -5688,7 +5688,7 @@ var Tamara = {
 // Add additional events for more control over timing e.g. a finalize event
 var UTIL = {
   fire: function(func, funcname, args) {
-    var namespace = Tamara;
+    var namespace = Electro;
     funcname = (funcname === undefined) ? 'init' : funcname;
     if (func !== '' && namespace[func] && typeof namespace[func][funcname] === 'function') {
       namespace[func][funcname](args);
