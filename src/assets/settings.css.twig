@@ -252,3 +252,43 @@ footer.content-info a {
 .ajaxcart {
   border-top: 4px solid {{ settings.brand_main_color }};
 }
+
+.pagination>li>a {
+  color:{{ settings.btn_bg_color }};
+}
+.pagination>li>span {
+  color:{{ settings.btn_text_color }};
+  background-color: {{ settings.btn_bg_color }};
+  border: 1px solid {{ settings.btn_bg_color }};
+}
+
+.pagination>.active>a,
+.pagination>.active>span,
+.pagination>.active>a:hover,
+.pagination>.active>span:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span:focus {
+  color:{{ settings.btn_text_color }};
+  background-color: {{ settings.btn_bg_color }};
+  border: 1px solid {{ settings.btn_bg_color }};
+}
+
+.pagination>li>a:hover,
+.pagination>li>span:hover,
+.pagination>li>a:focus,
+.pagination>li>span:focus {
+  color: {{ settings.btn_text_color }};
+  background-color: {{ settings.btn_bg_color }};
+  border-color: {{ settings.btn_bg_color }};
+}
+.input-group-addon {
+  color: {{ settings.btn_text_color }};
+  background-color: {{ settings.btn_bg_color }};
+  border-color: {{ settings.btn_bg_color }};
+}
+.top-navbar__search .input-group-addon {
+  color: {{ settings.btn_text_color }};
+  background-color: transparent;
+  border-color: transparent;
+  padding: 4px 12px;
+}
