@@ -1927,6 +1927,12 @@
             },
             {
               "type": "text",
+              "id": "display_sidebar_menu_title",
+              "label": "Título del menú",
+              "default": "Menú"
+            },
+            {
+              "type": "text",
               "id": "display_sidebar_menu_name",
               "label": "Identificador del menú",
               "default": "Mira la asombrosa variedad de artículos disponibles."

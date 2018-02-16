@@ -175,6 +175,7 @@
       "display_sidebar_collections": true,
       "display_sidebar_categories": true,
       "display_sidebar_menu": true,
+      "display_sidebar_menu_title": "Menú",
       "display_sidebar_menu_name": "main",
       "footer_show_main_menu": true,
       "footer_main_menu": "footer",
