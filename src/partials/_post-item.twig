@@ -8,13 +8,9 @@
       {% endif %}
     </figure>
     <div class="caption">
-      <div class="post-title"><h3>{{ post.title }}</h3></div>
-      <p class="post-summary">
-        {{ post.summary|length > 50 ? post.summary|slice(0, 50) ~ '...' : post.summary }}
-      </p>
-      <ul class="post-meta">
-      <li>{{ post.published_at | date }}</li>
-      </ul>
+      <div class="post-title">
+        <h3>{{ post.title }}</h3>
+      </div>
     </div>
   </a>
 </article>

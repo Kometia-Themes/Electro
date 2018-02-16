@@ -76,106 +76,36 @@
           ]
         },
         {
-          "header": "Degradado 1",
+          "header": "Combinación",
           "settings": [
             {
               "type": "color",
-              "id": "gradient_1_text",
+              "id": "gradient_color_text",
               "label": "Color de textos",
               "default": "#ffffff"
             },
             {
               "type": "color",
-              "id": "gradient_odd_a",
-              "label": "Primer color",
-              "default": "rgb(41,8,48)",
-              "info": "Si quieres un color sólido usa el mismo color del degradado final."
-            },
-            {
-              "type": "color",
-              "id": "gradient_odd_b",
-              "label": "Segundo color",
-              "default": "rgb(82,65,143)",
-              "info": "Si quieres un color sólido usa el mismo color del degradado final."
-            },
-            {
-              "type": "color",
-              "id": "gradient_odd_c",
-              "label": "Tercer color",
-              "default": "rgb(114,183,227)",
-              "info": "Si quieres un color sólido usa el mismo color del degradado final."
+              "id": "gradient_bg_color",
+              "label": "Fondo",
+              "default": "#6c71c1"
             }
           ]
         },
         {
-          "header": "Degradado 2",
+          "header": "Footer",
           "settings": [
             {
               "type": "color",
-              "id": "gradient_2_text",
-              "label": "Color de textos",
+              "id": "footer_color_text",
+              "label": "Textos",
               "default": "#ffffff"
             },
             {
               "type": "color",
-              "id": "gradient_even_a",
-              "label": "Primer color",
-              "default": "#134499",
-              "info": "Si quieres un color sólido usa el mismo color del degradado final."
-            },
-            {
-              "type": "color",
-              "id": "gradient_even_b",
-              "label": "Segundo color",
-              "default": "#2EB220",
-              "info": "Si quieres un color sólido usa el mismo color del degradado final."
-            },
-            {
-              "type": "color",
-              "id": "gradient_even_c",
-              "label": "Tercer color",
-              "default": "#CBF232",
-              "info": "Si quieres un color sólido usa el mismo color del degradado final."
-            }
-          ]
-        },
-        {
-          "header": "Degradado en cabeceras",
-          "settings": [
-            {
-              "type": "select",
-              "id": "gradient_pages",
-              "label": "Degradado en cabeceras",
-              "default": "gradient-odd",
-              "options": [
-                {
-                  "value": "gradient-odd",
-                  "label": "Degradado 1"
-                },{
-                  "value": "gradient-even",
-                  "label": "Degradado 2"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "header": "Degradado en footer",
-          "settings": [
-            {
-              "type": "select",
-              "id": "gradient_footer",
-              "label": "Degradado en cabeceras",
-              "default": "gradient-odd",
-              "options": [
-                {
-                  "value": "gradient-odd",
-                  "label": "Degradado 1"
-                },{
-                  "value": "gradient-even",
-                  "label": "Degradado 2"
-                }
-              ]
+              "id": "footer_bg_color",
+              "label": "Fondo",
+              "default": "#6c71c1"
             }
           ]
         },
@@ -1127,8 +1057,8 @@
                   "label": "Productos recientes"
                 },
                 {
-                  "value": "featured-main-banner",
-                  "label": "Banner Principal"
+                  "value": "featured-video",
+                  "label": "Video"
                 },
                 {
                   "value": "featured-products-trendings",
@@ -1163,8 +1093,8 @@
                   "label": "Productos recientes"
                 },
                 {
-                  "value": "featured-main-banner",
-                  "label": "Banner Principal"
+                  "value": "featured-video",
+                  "label": "Video"
                 },
                 {
                   "value": "featured-products-trendings",
@@ -1199,8 +1129,8 @@
                   "label": "Productos recientes"
                 },
                 {
-                  "value": "featured-main-banner",
-                  "label": "Banner Principal"
+                  "value": "featured-video",
+                  "label": "Video"
                 },
                 {
                   "value": "featured-products-trendings",
@@ -1216,7 +1146,7 @@
               "type": "select",
               "id": "frontpage_section_4",
               "label": "Sección 4",
-              "default": "featured-main_banner",
+              "default": "featured-video",
               "options": [
                 {
                   "value": "none",
@@ -1235,8 +1165,8 @@
                   "label": "Productos recientes"
                 },
                 {
-                  "value": "featured-main-banner",
-                  "label": "Banner Principal"
+                  "value": "featured-video",
+                  "label": "Video"
                 },
                 {
                   "value": "featured-products-trendings",
@@ -1271,8 +1201,8 @@
                   "label": "Productos recientes"
                 },
                 {
-                  "value": "featured-main-banner",
-                  "label": "Banner Principal"
+                  "value": "featured-video",
+                  "label": "Video"
                 },
                 {
                   "value": "featured-products-trendings",
@@ -1307,8 +1237,8 @@
                   "label": "Productos recientes"
                 },
                 {
-                  "value": "featured-main-banner",
-                  "label": "Banner Principal"
+                  "value": "featured-video",
+                  "label": "Video"
                 },
                 {
                   "value": "featured-products-trendings",
@@ -1374,6 +1304,17 @@
       "name": "Página de Inicio - Slider",
       "icon": "home-page",
       "sections": [
+        {
+          "header": "Settings generales",
+          "settings": [
+            {
+              "type": "checkbox",
+              "id": "slider_is_responsive",
+              "label": "Slider responsivo",
+              "info": "Si activas esta opción sólo se verán las imágenes sin textos"
+            }
+          ]
+        },
         {
           "header": "Slider 1",
           "settings": [
@@ -1713,69 +1654,61 @@
       ]
     },
     {
-      "name": "Página de Inicio - Destacado",
+      "name": "Página de Inicio - Video",
       "icon": "home-page",
       "sections": [
         {
-          "header": "Espacio Destacado 1",
+          "header": "Settings",
           "settings": [
             {
               "type": "checkbox",
-              "id": "featured_space_1",
-              "label": "Mostrar sección"
+              "id": "video_enable",
+              "label": "Mostrar el video",
+              "default": false
             },
             {
-              "type": "image",
-              "id": "featured_space_1_image",
-              "label": "Image",
-              "max-width": 1000,
-              "info": "Tamaño de 600x600px recomendado"
+              "type": "color",
+              "id": "video_bg_color",
+              "label": "Color de fondo",
+              "default": "#f3f2e9"
             },
             {
-              "type": "checkbox",
-              "id": "featured_space_1_display_image",
-              "label": "Mostrar imagen"
+              "type": "text",
+              "id": "video_url",
+              "label": "Id del video",
+              "info": "Si tu video es de Youtube, busca la opción compartir y copia el puro ID del video: https://www.youtube.com/watch?v=bnfwClgheF0 donde 'bnfwClgheF0' es el ID. Si tu video es de Vimeo, igualmente copia su ID: https://player.vimeo.com/video/{ID}"
             },
             {
               "type": "select",
-              "id": "featured_space_1_bg",
-              "label": "Degradado de fondo",
-              "default": "gradient-even",
+              "id": "video_url_type",
+              "label": "Origen del video",
+              "default": "youtube",
               "options": [
                 {
-                  "value": "gradient-odd",
-                  "label": "Degradado 1"
+                  "value": "youtube",
+                  "label": "Youtube"
                 },
                 {
-                  "value": "gradient-even",
-                  "label": "Degradado 2"
+                  "value": "vimeo",
+                  "label": "Vimeo"
                 }
               ]
             },
             {
-              "type": "text",
-              "id": "featured_space_1_title",
-              "label": "Encabezado"
-            },
-            {
-              "type": "textarea",
-              "id": "featured_space_1_desc",
-              "label": "Contenido"
-            },
-            {
-              "type": "checkbox",
-              "id": "featured_space_1_btn",
-              "label": "Mostrar botón"
-            },
-            {
-              "type": "text",
-              "id": "featured_space_1_btn_text",
-              "label": "Texto del botón"
-            },
-            {
-              "type": "text",
-              "id": "featured_space_1_btn_url",
-              "label": "Enlace del botón"
+              "type": "select",
+              "id": "video_format_size",
+              "label": "Proporción del video",
+              "default": "16by9",
+              "options": [
+                {
+                  "value": "16by9",
+                  "label": "16 x 9 (horizontal)"
+                },
+                {
+                  "value": "4by3",
+                  "label": "4 x 3 (cuadrado)"
+                }
+              ]
             }
           ]
         }
@@ -1839,18 +1772,6 @@
         {
           "header": "Descripción",
           "settings": [
-            {
-              "type": "checkbox",
-              "id": "products_display_intro_text",
-              "label": "Mostrar introducción en página de productos",
-              "default": true
-            },
-            {
-              "type": "text",
-              "id": "products_intro_text",
-              "label": "Texto de presentación",
-              "default": "Mira la asombrosa variedad de artículos disponibles."
-            },
             {
               "type": "checkbox",
               "id": "btn_product_buy_in_list",

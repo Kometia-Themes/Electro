@@ -62,17 +62,11 @@ h5, .h5 { font-size: {{ settings.heading_font_size / 2.571428 }}px; }
 h6, .h6 { font-size: {{ settings.heading_font_size / 3 }}px; }
 
 /* * * * * * * * * * * * * * */
-/* Gradients Odd and  Event  */
+/* Gradients Event  */
 /* * * * * * * * * * * * * * */
-.gradient-even {
-  background-color: {{ settings.gradient_even_a }};
-  background-image: linear-gradient(20deg, {{ settings.gradient_even_a }}, {{ settings.gradient_even_b }} 45%, {{ settings.gradient_even_c }});
-  color: {{ settings.gradient_2_text }};
-}
 .gradient-odd {
-  background-color: {{ settings.gradient_odd_a }};
-  background-image: linear-gradient(20deg, {{ settings.gradient_odd_a }}, {{ settings.gradient_odd_b }} 45%, {{ settings.gradient_odd_c }});
-  color: {{ settings.gradient_1_text }};
+  background-color: {{ settings.gradient_bg_color }};
+  color: {{ settings.gradient_color_text }};
 }
 .cta {
   background-color: {{ settings.newsletter_bg}};
@@ -80,9 +74,7 @@ h6, .h6 { font-size: {{ settings.heading_font_size / 3 }}px; }
 .sidebar-widget .category-menu .category-menu__list.category-menu--active,
 .sidebar-widget .collection-menu .collection-menu__list.collection-menu--active,
 .sidebar-widget .sidebarmenu-menu .sidebarmenu-menu__list.sidebarmenu-menu--active {
-  background-color: {{ settings.gradient_odd_a }};
-  background-image: linear-gradient(20deg, {{ settings.gradient_odd_a }}, {{ settings.gradient_odd_b }} 45%, {{ settings.gradient_odd_c }});
-  color: {{ settings.gradient_2_text }};
+  color: {{ settings.brand_main_color }};
 }
 .sidebar-widget .category-menu .category-menu__list .toggle-btn i.zmdi,
 .sidebar-widget .collection-menu .collection-menu__list .toggle-btn i.zmdi,
@@ -102,31 +94,19 @@ h6, .h6 { font-size: {{ settings.heading_font_size / 3 }}px; }
 .sidebar-widget .category-menu .category-menu__list.category-menu--active .toggle-btn i.zmdi,
 .sidebar-widget .collection-menu .collection-menu__list.collection-menu--active .toggle-btn i.zmdi,
 .sidebar-widget .sidebarmenu-menu .sidebarmenu-menu__list.sidebarmenu-menu--active .toggle-btn i.zmdi {
-  color: {{ settings.gradient_2_text }};
+  color: {{ settings.brand_main_color }};
 }
 .sidebar-widget .category-menu .category-menu__list.category-menu--active .toggle-btn:hover i.zmdi,
 .sidebar-widget .collection-menu .collection-menu__list.collection-menu--active .toggle-btn:hover i.zmdi,
 .sidebar-widget .sidebarmenu-menu .sidebarmenu-menu__list.sidebarmenu-menu--active .toggle-btn:hover i.zmdi {
-  color: {{ settings.gradient_2_text }};
+  color: {{ settings.brand_main_color }};
 }
-footer.content-info {
-  background-color: {{ settings.gradient_odd_a }};
-  background-image: linear-gradient(20deg, {{ settings.gradient_odd_a }}, {{ settings.gradient_odd_b }} 45%, {{ settings.gradient_odd_c }});
-  color: {{ settings.gradient_2_text }};
+.sidebar-widget .category-menu .category-menu--active .category-menu__link {
+  color: {{ settings.brand_main_color }};
 }
-footer.content-info .footer-copyright {
-  color: {{ settings.gradient_2_text }};
+.sidebar-widget .collection-menu .collection-menu--active .collection-menu__link {
+  color: {{ settings.brand_main_color }};
 }
-footer.content-info .footer-copyright a {
-  color: {{ settings.gradient_2_text }};
-}
-footer.content-info .footer-widget .title {
-  color: {{ settings.gradient_2_text }};
-}
-footer.content-info a {
-  color: {{ settings.gradient_2_text }};
-}
-
 /* * * * * */
 /* Topnav  */
 /* * * * * */
@@ -194,28 +174,28 @@ footer.content-info a {
 /* * * * * * * */
 /* Slides BTN  */
 /* * * * * * * */
-.btn-slide-1 {
+a.btn-slide-1 {
   background-color: {{ settings.btn_slide_1_bg }}; border-color: {{ settings.btn_slide_1_bg }}; color: {{ settings.btn_slide_1_text }};
 }
-.btn-slide-1:hover, .btn-slide-1:focus {
+a.btn-slide-1:hover, a.btn-slide-1:focus {
   background-color: {{ settings.btn_slide_1_bg_over }}; border-color: {{ settings.btn_slide_1_bg_over }}; color: {{ settings.btn_slide_1_text_over }};
 }
-.btn-slide-2 {
+a.btn-slide-2 {
   background-color: {{ settings.btn_slide_2_bg }}; border-color: {{ settings.btn_slide_2_bg }}; color: {{ settings.btn_slide_2_text }};
 }
-.btn-slide-2:hover, .btn-slide-2:focus {
+a.btn-slide-2:hover, a.btn-slide-2:focus {
   background-color: {{ settings.btn_slide_2_bg_over }}; border-color: {{ settings.btn_slide_2_bg_over }}; color: {{ settings.btn_slide_2_text_over }};
 }
-.btn-slide-3 {
+a.btn-slide-3 {
   background-color: {{ settings.btn_slide_3_bg }}; border-color: {{ settings.btn_slide_3_bg }}; color: {{ settings.btn_slide_3_text }};
 }
-.btn-slide-3:hover, .btn-slide-3:focus {
+a.btn-slide-3:hover, a.btn-slide-3:focus {
   background-color: {{ settings.btn_slide_3_bg_over }}; border-color: {{ settings.btn_slide_3_bg_over }}; color: {{ settings.btn_slide_3_text_over }};
 }
-.btn-slide-4 {
+a.btn-slide-4 {
   background-color: {{ settings.btn_slide_4_bg }}; border-color: {{ settings.btn_slide_4_bg }}; color: {{ settings.btn_slide_4_text }};
 }
-.btn-slide-4:hover, .btn-slide-4:focus {
+a.btn-slide-4:hover, a.btn-slide-4:focus {
   background-color: {{ settings.btn_slide_4_bg_over }}; border-color: {{ settings.btn_slide_4_bg_over }}; color: {{ settings.btn_slide_4_text_over }};
 }
 
@@ -291,4 +271,40 @@ footer.content-info a {
   background-color: transparent;
   border-color: transparent;
   padding: 4px 12px;
+}
+
+footer.content-info .footer-widget dd a:hover, footer.content-info .footer-widget dd a:focus {
+  color: {{ settings.footer_color_text }};
+  background-color: {{ settings.footer_bg_color }};
+}
+
+.featured-video {
+  background-color: {{ settings.video_bg_color }};
+}
+
+@media(min-width: 768px) {
+  .owl-theme .owl-nav [class*=owl-] {
+    padding: 28px 28px;
+  }
+  .featured-home .zmdi {
+    font-size: 20px;
+  }
+}
+
+footer.content-info {
+  background-color: {{ settings.bg_color }};
+  color: {{ settings.footer_color_text }};
+  background-color: {{ settings.footer_bg_color }};
+}
+footer.content-info .footer-copyright {
+  color: {{ settings.footer_color_text }};
+}
+footer.content-info .footer-copyright a {
+  color: {{ settings.footer_color_text }};
+}
+footer.content-info .footer-widget .title {
+  color: {{ settings.footer_color_text }};
+}
+footer.content-info a {
+  color: {{ settings.footer_color_text }};
 }

@@ -3,11 +3,11 @@
     <ul class="nav navbar-nav top-navbar__left">
     {% if store.customer_accounts_enabled_or_optional and settings.header_display_my_account %}
       {% if customer %}
-      <li class="navbar-account"><a href="/cuenta"><i class="zmdi zmdi-face" aria-hidden="true"></i> Mi Cuenta</a></li>
-      <li class="navbar-account"><a href="/cuenta/logout"><i class="zmdi zmdi-account-o" aria-hidden="true"></i> Cerrar sesión</a></li>
+      <li class="navbar-account"><a href="/cuenta">MI CUENTA</a></li>
+      <li class="navbar-account"><a href="/cuenta/logout">CERRAR SESIÓN</a></li>
       {% else %}
-      <li class="navbar-account"><a href="/cuenta/login"><i class="zmdi zmdi-account" aria-hidden="true"></i> Ingresar</a></li>
-      <li class="navbar-account"><a href="/cuenta/registro"><i class="zmdi zmdi-account-add" aria-hidden="true"></i> Registrarse</a></li>
+      <li class="navbar-account"><a href="/cuenta/login">INGRESAR</a></li>
+      <li class="navbar-account"><a href="/cuenta/registro">REGISTRO</a></li>
       {% endif %}
     {% endif %}
     </ul>

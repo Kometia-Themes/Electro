@@ -1,3 +1,35 @@
 .owl-carousel .owl-stage-outer {
   width: 100%;
 }
+
+.featured-home {
+  #featured-slider-home {
+    .slide-container.slide_responsive_img_container {
+      background: transparent;
+      height: auto !important;
+      padding: 0;
+      a.slide_responsive_img_link {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      img.slide_responsive_img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      img.slide_responsive_img.slide_responsive_img_desktop {
+        display: none;
+        @media(min-width: 768px) {
+          display: block;
+        }
+      }
+      img.slide_responsive_img.slide_responsive_img_mobile {
+        display: none;
+        @media(max-width: 767px) {
+          display: block;
+        }
+      }
+    }
+  }
+}
