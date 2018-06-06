@@ -5550,7 +5550,6 @@ var Electro = {
          $('#main-navbar .navigation__link + .dropdown-menu' ).removeClass('active');
        });
 
-
        $(window).resize(function(){
         alignHeights();
        });
@@ -5559,9 +5558,10 @@ var Electro = {
        });
       // AJAX Add to Cart Component
       // Add Product to cart by ajax
-      var root = document.location.hostname;
+      var root = window.location.hostname;
+      var PROTOCOL = window.location.protocol;
       var getAjaxStoteUrl = function(type) {
-        return 'https://'+ root + '/' + type;
+        return PROTOCOL + '//' + root + '/' + type;
       }
       var ajaxConfig = {
         postUrl: getAjaxStoteUrl('cart/add.js')
@@ -5756,7 +5756,8 @@ var Electro = {
         navText: [
           "<i class='zmdi zmdi-chevron-left'></i>",
           "<i class='zmdi zmdi-chevron-right'></i>"
-        ]
+        ],
+        animateOut: 'fadeOut'
       });
     }
   },
