@@ -1,10 +1,10 @@
 {
-  "name": "Tamara",
-  "version": "2.0.0",
-  "description": "Theme Tamara Shoperti",
+  "name": "Electro",
+  "version": "1.0.0",
+  "description": "Theme Electro Kometia",
   "repository": {
     "type": "git",
-    "url": "git@github.com:carlosvazquez/tamara-theme.git"
+    "url": "git@github.com:Kometia-Themes/Electro.git"
   },
   "main": "app.js",
   "scripts": {
@@ -15,11 +15,11 @@
     "serve": "webpack-dev-server --progress --colors --config ./webpack.server.config.js "
   },
   "keywords": [
-    "Shoperti",
+    "Kometia",
     "template",
     "theme"
   ],
-  "author": "Shoperti",
+  "author": "Kometia",
   "license": "ISC",
   "engineStrict": true,
   "engines": {
