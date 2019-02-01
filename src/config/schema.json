@@ -3,7 +3,7 @@
     "logo": "logo.jpg",
     "header": "Electro Theme",
     "content": [
-      "Tema de Shoperti flexible y poderoso. Por favor contáctanos por cualquier problema con este tema a [contacto](mailto:themes-support@shoperti.com)."
+      "Tema de Kometia flexible y poderoso. Por favor contáctanos por cualquier problema con este tema a [contacto](mailto:themes-support@kometia.com)."
     ]
   },
   "categories": [
@@ -1327,13 +1327,18 @@
               "type": "image",
               "id": "slide_1_image",
               "label": "Imagen de fondo",
-              "max-width": 1180,
-              "info": "1180px de ancho recomendado"
+              "info": "1280px de ancho por 520px de alto recomendado"
+            },
+            {
+              "type": "image",
+              "id": "slide_1_image_mobile",
+              "label": "Imagen de fondo",
+              "info": "620px de ancho por 480px de alto recomendado"
             },
             {
               "type": "checkbox",
               "id": "slide_1_image_show",
-              "label": "Mostrar imagen de fondo"
+              "label": "Activar imagen"
             },
             {
               "type": "text",
@@ -1390,13 +1395,18 @@
               "type": "image",
               "id": "slide_2_image",
               "label": "Imagen de fondo",
-              "max-width": 1180,
-              "info": "1180px de ancho recomendado"
+              "info": "1280px de ancho por 520px de alto recomendado"
+            },
+            {
+              "type": "image",
+              "id": "slide_2_image_mobile",
+              "label": "Imagen de fondo",
+              "info": "620px de ancho por 480px de alto recomendado"
             },
             {
               "type": "checkbox",
               "id": "slide_2_image_show",
-              "label": "Mostrar imagen de fondo"
+              "label": "Activar imagen"
             },
             {
               "type": "text",
@@ -1453,13 +1463,18 @@
               "type": "image",
               "id": "slide_3_image",
               "label": "Imagen de fondo",
-              "max-width": 1180,
-              "info": "1180px de ancho recomendado"
+              "info": "1280px de ancho por 520px de alto recomendado"
+            },
+            {
+              "type": "image",
+              "id": "slide_3_image_mobile",
+              "label": "Imagen de fondo",
+              "info": "620px de ancho por 480px de alto recomendado"
             },
             {
               "type": "checkbox",
               "id": "slide_3_image_show",
-              "label": "Mostrar imagen de fondo"
+              "label": "Activar imagen"
             },
             {
               "type": "text",
@@ -1516,13 +1531,18 @@
               "type": "image",
               "id": "slide_4_image",
               "label": "Imagen de fondo",
-              "max-width": 1180,
-              "info": "1180px de ancho recomendado"
+              "info": "1280px de ancho por 520px de alto recomendado"
+            },
+            {
+              "type": "image",
+              "id": "slide_4_image_mobile",
+              "label": "Imagen de fondo",
+              "info": "620px de ancho por 480px de alto recomendado"
             },
             {
               "type": "checkbox",
               "id": "slide_4_image_show",
-              "label": "Mostrar imagen de fondo"
+              "label": "Activar imagen"
             },
             {
               "type": "text",
@@ -1998,7 +2018,7 @@
       "icon": "contact-page",
       "sections": [
         {
-          "header": "Mapa",
+          "header": "Mapa con API",
           "settings": [
             {
               "type": "checkbox",
@@ -2032,6 +2052,22 @@
               "info": "API Key DEMO, Visita: https://developers.google.com/maps/documentation/geocoding/get-api-key y obtén una clave para continuar usando el mapa correctamente"
             }
           ]
+        },
+        {
+          "header": "Mapa Embebido",
+          "settings": [
+            {
+              "type": "checkbox",
+              "id": "map_is_embedded",
+              "label": "Mostrar mapa"
+            },
+            {
+              "type": "text",
+              "id": "map_address_embedded",
+              "label": "Ubicación a mostrar",
+              "info": "Ingresa el código de compartir"
+            }
+          ]
         }
       ]
     },
@@ -2051,49 +2087,49 @@
               "type": "text",
               "id": "facebook_link",
               "label": "Facebook",
-              "info": "https://www.facebook.com/shoperti"
+              "info": "https://www.facebook.com/kometiaHQ"
             },
             {
               "type": "text",
               "id": "twitter_link",
               "label": "Twitter",
-              "info": "https://twitter.com/shoperti"
+              "info": "https://twitter.com/kometiaHQ"
             },
             {
               "type": "text",
               "id": "instagram_link",
               "label": "Instagram",
-              "info": "https://instagram.com/shoperti/"
+              "info": "https://instagram.com/kometiaHQ"
             },
             {
               "type": "text",
               "id": "google_link",
               "label": "Google+",
-              "info": "https://plus.google.com/+shoperti"
+              "info": "https://plus.google.com/+kometia"
             },
             {
               "type": "text",
               "id": "youtube_link",
               "label": "Youtube",
-              "info": "https://www.youtube.com/user/shoperti"
+              "info": "https://www.youtube.com/user/kometia"
             },
             {
               "type": "text",
               "id": "vimeo_link",
               "label": "Vimeo",
-              "info": "https://vimeo.com/shoperti"
+              "info": "https://vimeo.com/kometia"
             },
             {
               "type": "text",
               "id": "pinterest_link",
               "label": "Pinterest",
-              "info": "https://www.pinterest.com/shoperti/"
+              "info": "https://www.pinterest.com/kometia/"
             },
             {
               "type": "text",
               "id": "tumblr_link",
               "label": "Tumblr",
-              "info": "http://shoperti.tumblr.com/"
+              "info": "http://kometia.tumblr.com/"
             },
             {
               "type": "text",

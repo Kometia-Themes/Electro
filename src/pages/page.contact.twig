@@ -30,6 +30,15 @@
         {% endform %}
     </div>
   </div> <!-- .content -->
+{% if settings.map_is_embedded and settings.map_address_embedded is not empty %}
+  <div class="row embedGMaps">
+    {% set googleKey = settings.map_address_embedded %}
+    {% set key = googleKey|split('\" ')[0] %}
+    {% set key = key|split('pb=')[1] %}
+    <iframe class="googleMapsEmbedFallback" src="https://www.google.com/maps/embed?pb={{ key }}" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+{% endif %}
+
 {% if settings.map_is_enabled %}
   <div class="row gmaps">
     <div class="col-sm-12 text-center map">
@@ -62,7 +71,7 @@
   var map_zoom = {{ settings.map_zoom }};
   function initMap() {
     var geocoder = new google.maps.Geocoder();
-    
+
     function codeAddress(address) {
 
      geocoder.geocode( { 'address': address}, function(results, status) {

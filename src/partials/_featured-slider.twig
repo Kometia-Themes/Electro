@@ -7,22 +7,21 @@
         {% set slide = 'slide_'~i %}
         {% if settings[slide] %}
         {% set slide_image        = slide~'_image' %}
+        {% set slide_image_mobile = slide~'_image_mobile' %}
         {% set slide_image_show   = slide~'_image_show' %}
         {% set slide_link         = slide~'_link' %}
         {% set slide_title        = slide~'_title' %}
           {% if settings[slide_image] and settings[slide_image_show] %}
             <div class="slide-container slide_responsive_img_container">
               <a href="{{ settings[slide_link] }}" class="slide_responsive_img_link">
-                <img src="{{ settings[slide_image] }}" alt="{{ settings[slide_title] }}" class="slide_responsive_img slide_responsive_img_desktop">
-                <img src="{{ settings[slide_image] }}&w=680&h=360&fit=crop" alt="{{ settings[slide_title] }}" class="slide_responsive_img slide_responsive_img_mobile">
+                <img src="{% if settings[slide_image] is not empty %}{{ settings[slide_image] }}&w=1280&h=520&fit=crop{% else %}{{ 'slider-desktop.png' | asset_url }}&w=1280&h=520&fit=crop{% endif %}" alt="{{ settings[slide_title] }}" class="slide_responsive_img slide_responsive_img_desktop">
+                <img src="{% if settings[slide_image_mobile] is not empty %}{{ settings[slide_image_mobile] }}&w=620&h=520&fit=crop{% else %}{{ 'slider-mobile.png' | asset_url }}{% endif %}&w=620&h=520&fit=crop" alt="{{ settings[slide_title] }}" class="slide_responsive_img slide_responsive_img_mobile">
               </a>
             </div>
           {% endif %}
         {% endif %}
       {% endfor %}
-
     {% else %}
-
       {% for i in 1..4 %}
         {% set slide = 'slide_'~i %}
         {% if settings[slide] %}
