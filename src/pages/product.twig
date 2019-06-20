@@ -61,18 +61,19 @@
                 {% if  modifiers |length > 0 %}
                   {% for modifier, options in modifiers %}
                     {% set step = loop.index0 %}
-                    {% set default_option = options[step] %}
+                    {% set default_option = options[step]|lower %}
                     <div class="col-xs-6 col-sm-6 product-selector-option">
-                      <select id="{{ modifier }}" class="selectpicker form-control js-variant-select" title="{{ modifier }}" name="{{ loop.index0 }}">
-                        <option value="" disabled>{{ modifier | title }}</option>
+                      <label for="{{ modifier|lower }}">{{ modifier | title }}</label>
+                      <select id="{{ modifier|lower }}" class="selectpicker form-control js-variant-select" title="{{ modifier }}" name="{{ loop.index0 }}">
                       {% for option in options %}
-                        <option value="{{ loop.index0 }}" {% if default_option == option %}selected="selected"{% endif %}>{{ option }}</option>
+                        <option value="{{ option|lower }}" {% if default_option == option|lower %}selected="selected"{% endif %}>{{ option }}</option>
                       {% endfor %}
                       </select>
                     </div>
                   {% endfor %}
                 {% endif %}
                   <div class="col-xs-6 col-sm-6 product-selector-option">
+                    <label for="quantity">Cantidad</label>
                     <div class="quantity">
                       <div class="input-group">
                         <input id="quantity" type="text" name="quantity" class="form-control input-number" value="1" min="1" max="10">
@@ -133,6 +134,7 @@
 {% endif %}
 
 <script type="text/javascript">
+$(document).ready(function(){
   var removeMainImgContainerHeight = function() {
       $('#sp-img-full figure.item').removeAttr("style");
     }
@@ -215,6 +217,7 @@
     }
   });
   // End quantity input
+
   // Update Social Share Links
   var title = '{{ product.name | escape }}';
   var updateShareUrl = function(image_url) {
@@ -236,7 +239,7 @@
       }
     });
   }
-{% if product.is_in_stock %}
+
   var skus = {{ product.skus | json }};
   $('.js-atc-disabled').hide();
   showSelectedSku();
@@ -283,8 +286,9 @@
     var disabledAddButton = $('.js-atc-disabled');
     var comparedPriceElement = $('.js-product-price-compared-amount');
     var imageMain = $('#sp-img-full .item');
-    imageMain.find('img').attr('src', newImageMain);
-
+    if (newImageMain !== null) {
+      imageMain.find('img').attr('src', newImageMain);
+    }
     if (sku !== null) {
       if (sku.stock_policy !== 'none' && sku.in_stock < 1) {
         sku = null;
@@ -317,8 +321,7 @@
   $('.js-variant-select').change(function() {
     showSelectedSku();
   });
-{% endif %}
-$(document).ready(function(){
+
   $('.selectpicker').selectpicker({
     style: 'btn'
   });
