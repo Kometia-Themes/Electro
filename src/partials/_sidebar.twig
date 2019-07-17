@@ -36,7 +36,7 @@
   <div class="widget sidebar-widget">
     <ul class="sidebarmenu-menu">
       {% set sidebarmenu = menus[settings.display_sidebar_menu_name] %}
-      <li class="sidebarmenu-menu__title"><h3>{{ settings.display_sidebar_menu_name | title }}</h3></li>
+      <li class="sidebarmenu-menu__title"><h3>{{ settings.display_sidebar_menu_title | title }}</h3></li>
       {% for menu in sidebarmenu %}
         {% include '_sidebarmenu_tree_item.twig' with {
           'menu' : menu,
